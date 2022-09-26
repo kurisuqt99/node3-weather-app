@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="icon" href="/img/icons8-sun-16.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather.</p>
+
+        <form>
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p id="messageOne"></p>
+        <p id="messageTwo"></p>
+    </div>
+
+
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
