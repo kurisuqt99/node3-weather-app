@@ -3,10 +3,10 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require ('./utils/forecast')
-const cors = require('cors')
 
 const app = express()
-////app.use(cors())
+// port that is only set on Heroku OR 3000 for localhost
+const port = process.env.PORT || 3000
 
 // DEFINE PATHS FOR EXPRESS CONFIG
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -124,6 +124,6 @@ app.get('*', (req, res) => {
 })
 
 // starts server up and listens on specific port
-app.listen(3000, () => {
-    console.log('Server inizia su porto 3000')
+app.listen(port, () => {
+    console.log('Server inizia su porto ' + port)
 })

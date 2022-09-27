@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     // will kick off asynchronous IO operation; won't have access to data right away
     // fetch data and THEN dump response
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 //console.log(data.error)
